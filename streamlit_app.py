@@ -116,7 +116,8 @@ st.markdown("""
 
 @st.cache_resource
 def load_yolo_model(model_path):
-    """Load YOLO model"""
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+     model_file = os.path.join(BASE_DIR, "cow_eartag_yolov8n_best.pt")
     try:
         from ultralytics import YOLO
         if not os.path.exists(model_path):
