@@ -30,7 +30,7 @@ st.set_page_config(
 # ============================================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "YOLOv8_best.pt")  # <-- YOUR MODEL
+MODEL_PATH = os.path.join(BASE_DIR, "YOLOv8n_best.pt")  # <-- YOUR MODEL
 
 # ============================================
 # Cached Model Loading
