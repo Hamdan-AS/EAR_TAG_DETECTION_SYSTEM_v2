@@ -1,24 +1,8 @@
-# ============================================
-# Requirements for Cattle Ear-Tag Detection App
-# Fixed for Python 3.13 and Streamlit Cloud compatibility
-# ============================================
-
-# Web app framework - latest stable version
-streamlit
-
-# Image processing - latest compatible
-opencv-python-headless
-Pillow
-numpy
-
-# AI Detection - latest stable
-ultralytics
-
-# Text Recognition (OCR) - latest stable  
-easyocr
-
-# Data handling
-pandas
-
-# Optional but useful
-requests
+streamlit==1.32.0
+ultralytics==8.1.0
+easyocr==1.7.1
+opencv-python-headless==4.9.0.80
+numpy==1.26.4
+Pillow==10.2.0
+torch==2.1.2
+torchvision==0.16.2
