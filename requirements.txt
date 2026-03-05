@@ -1,0 +1,24 @@
+# ============================================
+# Requirements for Cattle Ear-Tag Detection App
+# List of all packages needed to run the app
+# ============================================
+
+# Core framework for building the web app
+streamlit==1.28.1
+
+# For working with images
+opencv-python==4.8.1.78
+Pillow==10.0.1
+numpy==1.24.3
+
+# For AI detection (finds ear tags)
+ultralytics==8.0.207
+
+# For reading text from images (OCR)
+easyocr==1.7.0
+
+# For data handling
+pandas==2.0.3
+
+# For working with zip files (usually comes with Python, but just in case)
+# zipfile is built-in, no need to install
