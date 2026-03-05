@@ -7,7 +7,7 @@
 streamlit
 
 # Image processing - latest compatible
-opencv-python
+opencv-python-headless
 Pillow
 numpy
 
