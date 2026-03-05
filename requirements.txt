@@ -4,21 +4,21 @@
 # ============================================
 
 # Web app framework - latest stable version
-streamlit==1.41.1
+streamlit
 
 # Image processing - latest compatible
-opencv-python>=4.10.0.84
-Pillow>=11.0.0
-numpy>=2.0.0
+opencv-python
+Pillow
+numpy
 
 # AI Detection - latest stable
-ultralytics>=8.3.0
+ultralytics
 
 # Text Recognition (OCR) - latest stable  
-easyocr>=1.7.1
+easyocr
 
 # Data handling
-pandas>=2.1.0
+pandas
 
 # Optional but useful
-requests>=2.31.0
+requests
