@@ -1,6 +1,9 @@
-streamlit
-ultralytics
-easyocr
-opencv-python-headless
-pillow
-numpy
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2+cpu
+torchvision==0.17.2+cpu
+streamlit==1.35.0
+ultralytics==8.2.18
+easyocr==1.7.1
+opencv-python-headless==4.9.0.80
+Pillow==10.3.0
+numpy==1.26.4
