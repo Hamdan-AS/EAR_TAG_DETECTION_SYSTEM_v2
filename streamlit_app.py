@@ -1,9 +1,17 @@
 # ============================================
 # 🐄 Cattle Ear-Tag Detection App
 # A beginner-friendly app to detect and read cow ear tags
+# Compatible with Python 3.8 - 3.13
 # ============================================
 
+import sys
 import streamlit as st
+
+# Check Python version
+if sys.version_info < (3, 8):
+    st.error("❌ This app requires Python 3.8 or higher")
+    st.stop()
+
 import cv2
 import numpy as np
 from PIL import Image
@@ -82,13 +90,31 @@ st.markdown("""
 @st.cache_resource  # This means "remember this, don't load it again"
 def load_yolo_model(model_path):
     """Load the YOLO detection model (finds the ear tags in images)"""
-    from ultralytics import YOLO
-    return YOLO(model_path)
+    try:
+        from ultralytics import YOLO
+        # Check if model file exists
+        if not os.path.exists(model_path):
+            st.error(f"❌ Model file not found: {model_path}\nMake sure the .pt file is in the same folder as app.py")
+            st.stop()
+        return YOLO(model_path)
+    except ImportError:
+        st.error("❌ YOLO not installed properly. Try: pip install --upgrade ultralytics")
+        st.stop()
+    except Exception as e:
+        st.error(f"❌ Error loading YOLO model: {e}")
+        st.stop()
 
 @st.cache_resource
 def load_ocr_model():
     """Load the OCR model (reads text from the ear tags)"""
-    return easyocr.Reader(['en'], gpu=False)
+    try:
+        return easyocr.Reader(['en'], gpu=False)
+    except ImportError:
+        st.error("❌ EasyOCR not installed properly. Try: pip install --upgrade easyocr")
+        st.stop()
+    except Exception as e:
+        st.error(f"❌ Error loading OCR model: {e}")
+        st.stop()
 
 # ============================================
 # STEP 4: Create the title and instructions
