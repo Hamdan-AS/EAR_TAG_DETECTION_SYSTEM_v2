@@ -55,7 +55,7 @@ def load_ocr():
 # UI
 # ============================================
 
-st.title("🐄 Cattle Ear-Tag Detection System")
+st.title("🐄 Cattle Ear-Tag Detection System V2")
 
 st.markdown("""
 Upload cow images → Detect ear tags → Read numbers → Correct → Download results.
